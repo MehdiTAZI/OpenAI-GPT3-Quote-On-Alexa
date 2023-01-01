@@ -6,7 +6,7 @@ from alexa import AlexaSkill
 #put your open api api key here, please check the pricing model
 openai.api_key = "PUT_YOUR_OPENAI_KEY_HERE"
 
-class QuoteSkill(AlexaSkill):
+class PropheticQuotesSkill(AlexaSkill):
     def __init__(self):
         AlexaSkill.__init__(self)
 
@@ -23,7 +23,7 @@ class QuoteSkill(AlexaSkill):
             raise ValueError("Invalid intent")
 
     def get_welcome_message():
-        speech_output = "Welcome to random quotes"
+        speech_output = "Welcome to prophetic quotes"
         return build_response(create_alexa_response(speech_output))
 
     # Generate a quote using chatbot engine
@@ -63,5 +63,5 @@ class QuoteSkill(AlexaSkill):
         }
       
     def lambda_handler(event, context):
-      skill = QuoteSkill()
+      skill = PropheticQuotesSkill()
       return skill.route_request(event)
