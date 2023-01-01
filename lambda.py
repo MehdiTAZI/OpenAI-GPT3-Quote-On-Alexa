@@ -29,12 +29,11 @@ class QuoteSkill(AlexaSkill):
     # Generate a quote using chatbot engine
     def handle_quote_intent(intent, session):
         response = openai.Completion.create(
-            # you can also use  GPT-3 text-davinci-003 engine
-            engine="chatbot",
-            prompt="Give one random quote with it author and explain it in few words.",
-            temperature=0.5,
-            max_tokens=random.randint(150, 1000),
-            top_p=1
+            engine="text-davinci-003",
+            prompt="Give me one random quote with it author and explain it. the quote should be from mohamed prophete or Jesus or Moise (PBUH)",
+            temperature=1,
+            max_tokens= random.randint(150, 1000),
+            top_p= 0.7
         )
         quote = response['choices'][0]['text']
         speech_output = f"Today's quote is : {quote}"
