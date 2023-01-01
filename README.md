@@ -1,2 +1,2 @@
 # OpenAI-GPT3-Quote-On-Alexa
-Create an Alexa Application that generate a quote using OpenAI GPT-3 based on the text-davinci-003 engine
+is an example of Alexa skills that generates prophetics quotes using OpenAI GPT-3 API based on the text-davinci-003 engine
